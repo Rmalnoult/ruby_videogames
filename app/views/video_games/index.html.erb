@@ -1,16 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Video Games</h1>
+<div class="col-md-8 col-md-offset-2">
+  <h1>Listing Video Games</h1>
 
-<% @video_games.each do |video_game| %>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <h2><%= video_game.name %></h2>
+  <% @video_games.each do |video_game| %>
+      <div class="panel panel-default">
+      <a href="/video_games/<%= video_game.id  %>">
+        <div class="panel-body">
+          <h2><%= video_game.name %></h2>
+        </div>
+      </a>
+    <a class="btn btn-info" href="/video_games/<%= video_game.id %>"><span class="glyphicon glyphicon-eye-open"></span> Voir</a>
       </div>
-    </div>
-    <%= link_to 'Show', video_game %>
 
 
-<% end %>
+  <% end %>
+  <a class="btn btn-success" href="/video_games/new"><span class="glyphicon glyphicon-plus"></span> Ajouter un jeu vidéo</a>
+</div>
 
-<%= link_to 'New Video game', new_video_game_path %>

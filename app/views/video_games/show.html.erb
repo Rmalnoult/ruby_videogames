@@ -1,7 +1,35 @@
-<p id="notice"><%= notice %></p>
+<p class="alert alert-success" id="notice"><%= notice %></p>
 
 <div class="panel panel-default col-md-8 col-md-offset-2">
 	<div class="panel-body">
 		<h2><%= @video_game.name %></h2>
+<br><br>
+		<h4>Critiques: </h4>
+		<p>...</p>
+	</div>
+</div>
+
+
+<div class="panel panel-default col-md-8 col-md-offset-2">
+	<div class="panel-body">
+		<h2>Ajouter une critique</h2>
+
+
+		<form role="form" action="/analysis" method="POST">
+		  <div class="form-group">
+		    <label for="title">Titre</label>
+		    <input type="text" class="form-control" id="title" name="title">
+		  </div>
+
+		  <div class="form-group">
+		    <label for="content">Contenu</label>
+		    <textarea class="form-control" id="content" name="content"></textarea>
+		  </div>
+		  <button type="submit" class="btn btn-default">Enregistrer</button>
+		</form>
+
+
+
+
 	</div>
 </div>
