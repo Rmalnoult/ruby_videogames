@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
-  resources :tracks, only: [:index, :show]
+  resources :video_games, only: [:index, :show, :create, :new, :edit]
   resources :artists, only: [:index, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
